@@ -1,0 +1,1 @@
+web: gunicorn CustomTokenAuth.wsgi --log-file -
