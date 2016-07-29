@@ -1,6 +1,6 @@
 from django.contrib import admin
 
 # Register your models here.
-from models import AccessTokens
+from models import AccessToken
 
-admin.site.register(AccessTokens)
+admin.site.register(AccessToken)
