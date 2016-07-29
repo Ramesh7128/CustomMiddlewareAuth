@@ -13,7 +13,9 @@ class CustomTokenAuthentication(object):
 			return None
 		else:
 			return None
-			return HttpResponse('Unauthorized', status=401)
+			# res =  HttpResponse("Invalid token", status=401)
+			# res["WWW-Authenticate"] = "Invalid Token"
+			# return res
 
 
 
