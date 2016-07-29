@@ -12,3 +12,13 @@ class AccessToken(models.Model):
 		return self.token
 
 
+class SampleProduct(models.Model):
+	
+	item = models.CharField(max_length=100, blank=False, null=False)
+	price = models.FloatField(blank=False, null=False)
+
+	def __unicode__(self):
+		return self.item
+
+
+
