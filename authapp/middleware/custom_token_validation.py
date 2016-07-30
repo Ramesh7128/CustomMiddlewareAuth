@@ -12,7 +12,6 @@ class CustomTokenAuthentication(object):
 		if AccessToken.objects.filter(token=access_token).exists():
 			return None
 		else:
-			return None
 			res =  HttpResponse("Invalid token", status=401)
 			res["WWW-Authenticate"] = "Invalid Token"
 			return res
