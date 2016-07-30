@@ -21,7 +21,8 @@ class RequestTokenTests(TestCase):
 
 	# Test to check if a valid token present in the request header
 	def test_invalid_token_present(self):
-		resp = self.client.get(reverse('productlist'), **{'HTTP_TOKEN':'8742627sdfsdfsf4e3423dsd23'})
+		accessToken = AccessToken.objects.latest('id')
+		resp = self.client.get(reverse('productlist'), **{'HTTP_TOKEN':accessToken.token})
 		self.assertEqual(resp.status_code,200) 
 
 
